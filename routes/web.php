@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 */
 
-
+/*
 Route::get('/', function () {
     $categories = [
         "type" => "Laghos",
@@ -17,9 +17,25 @@ Route::get('/', function () {
     ];
     return view('intro', $categories);
 });
+*/
 
 
-Route::get('/test', function () {
-    return view('test');
+/*
+Route::get('/', function () {
+    $requests = [
+        "name" => request("name")
+    ];
+    return view('test', $requests);
+});
+*/
+
+
+Route::get('/{page}', function ($page) {
+
+    $requests = [
+        "name" => request("name"),
+        "page" => $page,
+    ];
+    return view('test', $requests);
 });
 
