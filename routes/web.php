@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
+//Incliude this namespave for each controllers
+use App\Http\Controllers\PageController;
+
+
+Route::get('/{page}', [PageController::class, 'index']);
+
 /*
 Route::get('/', function () {
     return view('welcome');
@@ -30,6 +36,8 @@ Route::get('/', function () {
 */
 
 
+/*
+//http://localhost:8000/supermario/?name=mario
 Route::get('/{page}', function ($page) {
 
     $requests = [
@@ -38,4 +46,4 @@ Route::get('/{page}', function ($page) {
     ];
     return view('test', $requests);
 });
-
+*/
